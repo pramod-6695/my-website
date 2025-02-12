@@ -6,7 +6,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Pull the latest code from your Git repository
-                git 'https://github.com/pramod-6695/ChatbotPOC.git'
+                git 'https://github.com/pramod-6695/my-website.git'
             }
         }
 
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image using the Dockerfile
-                    sh 'docker build -t Asset management Website .'
+                    sh 'docker build -t my-website .'
                 }
             }
         }
@@ -28,7 +28,7 @@ pipeline {
                     sh 'docker stop website-container || true'
                     sh 'docker rm website-container || true'
                     // Run the container from the built image
-                    sh 'docker run -d -p 8080:80 --name website-container Asset management Website'
+                    sh 'docker run -d -p 8080:80 --name website-container my-website'
                 }
             }
         }
