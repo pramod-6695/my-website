@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'git credentialsId: 'github-token', branch: 'main', url: 'https://github.com/pramod-6695/my-website.git'
-                    
+                git branch: 'main', 
+                    url: 'https://github.com/pramod-6695/my-website.git'
             }
         }
 
