@@ -5,7 +5,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', 
-                    url: 'https://github.com/pramod-6695/my-website.git'
+                    url: 'git credentialsId: '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', branch: 'main', url: 'https://github.com/pramod-6695/my-website.git'
             }
         }
 
