@@ -6,7 +6,9 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Pull the latest code from your Git repository
-                git 'https://github.com/pramod-6695/my-website.git'
+                git branch: 'main', 
+                    credentialsId: 'your-github-credentials-id', // Ensure credentials are added
+                    url: 'https://github.com/pramod-6695/my-website.git'
             }
         }
 
