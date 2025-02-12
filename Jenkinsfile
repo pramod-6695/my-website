@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'sudo docker build -t my-website .' // Use sudo if needed
+                    sh 'docker build -t my-website .' // Use sudo if needed
                 }
             }
         }
