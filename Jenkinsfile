@@ -28,7 +28,7 @@ pipeline {
                     sh 'docker stop website-container || true'
                     sh 'docker rm website-container || true'
                     // Run the container from the built image
-                    sh 'docker run -d -p 8080:80 --name website-container my-website'
+                    sh 'docker run -d -p 8090:80 --name website-container my-website'
                 }
             }
         }
