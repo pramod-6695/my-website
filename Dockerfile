@@ -3,7 +3,7 @@ FROM nginx:1.25
 
 # Copy index.html to the correct location
 COPY index.html /usr/share/nginx/html/index.html
-COPY index.html /usr/share/nginx/html/styles.css
+COPY style.css /usr/share/nginx/html/styles.css
 
 # Expose port 80 to allow access
 EXPOSE 80
