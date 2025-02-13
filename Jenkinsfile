@@ -1,8 +1,5 @@
 pipeline {
     agent any 
-    environment {
-        PATH = "/usr/local/bin:/usr/bin:/bin:/sbin"
-
     stages {
         stage('Clone Repository') {
             steps {
@@ -14,7 +11,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh '/bin/sh -c "echo Running shell script"'
                     sh 'docker build -t my-website .' // Use sudo if needed
                 }
             }
