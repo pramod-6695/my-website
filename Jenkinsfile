@@ -1,5 +1,16 @@
 pipeline {
     agent any 
+    environment {
+        SHELL = "/bin/sh"
+        PATH = "/usr/local/bin:/usr/bin:/bin:/sbin"
+    }
+    stages {
+        stage('Test Shell') {
+            steps {
+                sh '/bin/sh -c "echo Shell is working!"'
+            }
+        }
+    }
     stages {
         stage('Clone Repository') {
             steps {
