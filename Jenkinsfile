@@ -4,18 +4,17 @@ pipeline {
         SHELL = "/bin/sh"
         PATH = "/usr/local/bin:/usr/bin:/bin:/sbin"
     }
-    stages {
-        stage('Test Shell') {
-            steps {
-                sh '/bin/sh -c "echo Shell is working!"'
-            }
-        }
-    }
+    
     stages {
         stage('Clone Repository') {
             steps {
                 git branch: 'main', 
                     url: 'https://github.com/pramod-6695/my-website.git'
+            }
+        }
+        stage('Test Shell') {
+            steps {
+                sh '/bin/sh -c "echo Shell is working!"'
             }
         }
 
