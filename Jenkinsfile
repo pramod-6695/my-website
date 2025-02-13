@@ -36,7 +36,7 @@ pipeline {
                     // Ensure the container starts successfully
                     sh '''
                     set -e
-                    docker run -d -p 8060:80 --name website-container my-website
+                    docker run -d -p 8040:80 --name website-container my-website
                     '''
                 }
             }
